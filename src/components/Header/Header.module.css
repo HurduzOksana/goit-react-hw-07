@@ -20,7 +20,12 @@
 .Nav {
   font-size: 25px;
   text-decoration: none;
+  color: #475752;
 }
 .Nav:not(:last-child) {
   margin-right: 50px;
+}
+
+.active {
+  color: #475752;
 }

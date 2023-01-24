@@ -22,10 +22,11 @@
   text-decoration: none;
   color: #475752;
 }
+
 .Nav:not(:last-child) {
   margin-right: 50px;
 }
 
-.active {
-  color: #475752;
+.Nav.active {
+  color: rgb(33, 168, 144);
 }

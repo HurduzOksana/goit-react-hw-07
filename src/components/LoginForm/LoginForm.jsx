@@ -1,7 +1,10 @@
 import css from './LoginForm.module.css';
-
 import { useDispatch } from 'react-redux';
 import { login } from 'redux/auth/auth-operations';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from 'styles/styles';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -17,21 +20,31 @@ export const LoginForm = () => {
   };
 
   return (
-    <form className={css.form} onSubmit={handleSubmit}>
-      <label className={css.label}>
-        Email
-        <input type="email" name="email" placeholder="Enter email" required />
-      </label>
-      <label className={css.label}>
-        Password
-        <input
-          type="password"
-          name="password"
-          placeholder="Enter password"
-          required
-        />
-      </label>
-      <button type="submit">Log In</button>
-    </form>
+    <ThemeProvider theme={theme}>
+      <form className={css.form} onSubmit={handleSubmit}>
+        <label className={css.label}>
+          <TextField
+            // id="outlined-name"
+            type="email"
+            name="email"
+            label="Email"
+            placeholder="Enter email"
+            required
+          />
+        </label>
+        <label className={css.label}>
+          <TextField
+            type="password"
+            name="password"
+            label="Password"
+            placeholder="Enter password"
+            required
+          />
+        </label>
+        <Button variant="contained" type="submit">
+          Login
+        </Button>
+      </form>
+    </ThemeProvider>
   );
 };

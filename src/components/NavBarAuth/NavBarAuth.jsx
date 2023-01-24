@@ -4,11 +4,11 @@ import style from './NavBarAuth.module.css';
 
 const NavBarAuth = () => {
   return (
-    <div>
+    <div className={style.linkWrapper}>
       <NavLink to="/register" className={style.link}>
-        register
+        Signup
       </NavLink>
-      <NavLink to="/login">login</NavLink>
+      <NavLink to="/login">Login</NavLink>
     </div>
   );
 };

@@ -1,6 +1,6 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import useAuth from 'hooks/useAuth';
 import NavbarMenu from 'components/NavbarMenu/NavbarMenu';
 import NavBarAuth from 'components/NavBarAuth/NavBarAuth';
